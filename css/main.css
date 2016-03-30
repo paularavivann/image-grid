@@ -12,6 +12,10 @@ html {
   box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,10 +24,6 @@ body {
 section {
   margin: 0;
   padding: 0;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
 }
 
 img:nth-child(2) {
@@ -35,29 +35,78 @@ img:nth-child(5) {
 }
 
 img {
+  display: block;
   max-width: 100%;
   margin: 0;
   padding: 0;
+  float: left;
 }
 
 @media only screen and (min-width: 25em) {
 
+  img {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
 
+  img:nth-child(1) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  img:nth-child(2) {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  img:nth-child(5) {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
 
 }
 
 @media only screen and (min-width: 38em) {
 
+  img:nth-child(5) {
+    display: none;
+  }
 
+  img {
+    margin: 0;
+    padding: 0;
+    width: 33.333%;
+  }
+
+  img:nth-child(1) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
 }
 
 @media only screen and (min-width: 60em) {
 
-
+  img:nth-child(5) {
+    display: inline-block;
   }
 
-  body img:nth-child(1) {
-    display: inline;
+  img:nth-child(1) {
+    width: 66.6666%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
   }
+
+  img {
+    margin: 0;
+    padding: 0;
+    width: 33.3333%;
+  }
+
 }
